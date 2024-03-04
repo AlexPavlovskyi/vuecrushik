@@ -3,11 +3,12 @@
     <h1>This is an about page</h1>
     <div class="border-bottom"></div>
     <p>Welcome to our task list site, where organization meets efficiency in the digital age. We understand the complexities of modern life and the myriad of tasks that come with it. That's why we've designed a platform that seamlessly integrates into your daily routine, empowering you to stay on top of your tasks with ease. Whether you're managing personal projects, coordinating team assignments, or simply jotting down your daily to-dos, our intuitive interface ensures that nothing slips through the cracks. With customizable features tailored to your unique workflow, you can prioritize tasks, set deadlines, and track progress effortlessly. Say goodbye to scattered notes and forgotten appointments - our task list site is your one-stop solution for streamlined productivity. Join us today and experience the simplicity of staying organized in a chaotic world.</p>
-    <router-link to="/">Back to Homepage</router-link>
+    <div class="border-bottom"></div>
+    <router-link class="backHome" to="/">Back to Homepage</router-link>
   </div>
 </template>
 
-<style scope>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 
@@ -16,6 +17,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.backHome {
+  font-size: 17px;
+
 }
 
 body {
@@ -37,7 +42,7 @@ h1 {
   margin: 30px auto;
   overflow: auto;
   min-height: 500px;
-  border: 1px solid steelblue;
+  border: 1px solid #afbdb3;
   padding: 30px;
   border-radius: 5px;
 }

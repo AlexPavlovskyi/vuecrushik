@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1 class="title">{{title}}</h1>
-        <ButtonSigma text="Add Task" color="#42f572"/>
+        <ButtonSigma @toggle-add-task="$emit('toggle-add-task')" :text="showAddTask ? 'Close' : 'Add Task'" :color="showAddTask ? 'red' : 'green'"/>
     </header>
 </template>
 
@@ -13,11 +13,16 @@ export default {
     components: {
         ButtonSigma,
     },
-    props: ['title'],
+    props: {
+        title: String,
+        showAddTask: Boolean,
+    }
 }
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 
 header {
     display: flex;
@@ -29,6 +34,7 @@ header {
     font-size: 36px;
     color: white;
     font-weight: 900;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-right: 15px;
     }

@@ -1,13 +1,17 @@
 <template>
   <div class="container">
-    <HeaderSigma title="Task Tracker"/>
-    <TasksSigma @delete-task= "deleteTask" v-bind:tasks="tasks"/>
+    <HeaderSigma :showAddTask="showAddTask" @toggle-add-task="toggleAddTask" title="Task Tracker"/>
+    <div v-if="showAddTask">
+      <AddTaskSigma @add-task="addTask"/>
+    </div>
+    <TasksSigma @toggle-reminder="toggleReminder" @delete-task= "deleteTask" v-bind:tasks="tasks"/>
   </div>
 </template>
 
 <script>
 import HeaderSigma from '../components/HeaderSigma.vue';
 import TasksSigma from '../components/TasksSigma.vue';
+import AddTaskSigma from '../components/AddTaskSigma.vue';
 
 
 export default {
@@ -15,18 +19,29 @@ export default {
   components: {
     HeaderSigma,
     TasksSigma,
+    AddTaskSigma,
   },
   data() {
     return {
       tasks: [],
+      showAddTask: false,
     };
   },
   methods: {
+    toggleAddTask(){
+      this.showAddTask = !this.showAddTask;
+    },
+    addTask(task) {
+      this.tasks = [...this.tasks, task];
+    },
     deleteTask(id) {
       if (confirm('Are you sure?')) {
         this.tasks = this.tasks.filter((task) => task.id !== id);
       }
     }, 
+    toggleReminder(id) {
+      this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task)
+    },
     },
   created() {
     this.tasks = [
@@ -70,9 +85,10 @@ body {
 .container {
   max-width: 730px;
   margin: 30px auto;
+  min-width: 440px;
   overflow: auto;
-  min-height: 500px;
-  border: 1px solid steelblue;
+  min-height: 670px;
+  border: 1px solid #afbdb3;
   padding: 30px;
   border-radius: 5px;
 }
@@ -84,7 +100,6 @@ body {
   border: none;
   padding: 10px 20px;
   margin: 5px;
-  border-radius: 5px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
