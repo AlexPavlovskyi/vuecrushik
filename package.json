@@ -7,11 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "serve": "vite serve",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "backend": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
+    "json-server": "^1.0.0-alpha.23",
     "vue": "^3.4.15",
+    "vue-cli": "^2.9.6",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
