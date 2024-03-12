@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper"> 
       <h1>Productivity Manager</h1>
       <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="25" height="25" />
-      
+      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -100,7 +100,14 @@ nav a:first-of-type {
   .logo {
     margin: 0 2rem 0 0;
   }
-
+.material-symbols-outlined {
+  margin: 0 2rem 0 0;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
   header .wrapper {
     display: flex;
     place-items: flex-start;
