@@ -102,13 +102,15 @@ body {
 }
 
 .container {
-  max-width: 730px;
   margin: 30px auto;
   min-width: 440px;
   overflow: auto;
   min-height: 670px;
   border: 1px solid #afbdb3;
-  padding: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   border-radius: 5px;
 }
 

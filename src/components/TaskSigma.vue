@@ -34,6 +34,7 @@ export default {
     .fas {
         font-size: 20px;
         color: #fcba03;
+        padding-left: 10px;
     }
     .fas:hover {
         color: red;

@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/exchange">Exchane Rates</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -29,7 +30,7 @@ header {
   max-height: 50vh;
 }
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 50px;
