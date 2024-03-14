@@ -29,6 +29,9 @@ header {
   line-height: 0.5;
   max-height: 50vh;
 }
+h1{
+  font-size: 33px;
+}
 footer {
   position: fixed;
   bottom: 0;
