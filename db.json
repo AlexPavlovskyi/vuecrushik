@@ -23,6 +23,12 @@
       "text": "Doctor´s appointment",
       "day": "Tomorrow at noon ",
       "reminder": true
+    },
+    {
+      "id": "4914",
+      "text": "Add Exchange Rates Page to this site",
+      "day": "This week",
+      "reminder": true
     }
   ]
 }

@@ -1,24 +1,30 @@
 <template>
   <div class="container">
-    <ExchangeRate />
-    <ExchangeRate />
+    <h1 class="inter">Exchange Rates</h1>
+
+    <ExchangeRateBTC />
+    <ExchangeRateETH />
   </div>
 </template>
 
 <script>
-import ExchangeRate from '@/components/ExchangeRate.vue';
+import ExchangeRateBTC from '@/components/ExchangeRateBTC.vue';
+import ExchangeRateETH from '@/components/ExchangeRateETH.vue';
 
 
 export default {
   name: 'ExchangeView',
   components: {
-    ExchangeRate
+    ExchangeRateBTC,
+    ExchangeRateETH
   }
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -30,6 +36,16 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+}
 .container {
   max-width: 730px;
   margin: 30px auto;

@@ -1,7 +1,7 @@
 <template>
   <div class="exchanges">
     <header>
-      <h1 class="tittle inter">BTC Exchange Rate</h1>
+      <h1 class="tittle inter">Ξ Etherium</h1>
       <button @click="update()" :style="{ background: 'green'}" class="btn">Update</button>
     </header>
     <table>
@@ -9,17 +9,13 @@
           <th><h2>Currency</h2></th>
           <th><h2>Rate</h2></th>
       </tr>
-      <tr v-if="exchange && exchange.bpi">
+      <tr v-if="exchange && exchange.ETH">
         <td>USD</td>
-        <td>{{ exchange.bpi.USD.rate }}</td>
+        <td>{{ exchange.ETH.USD }}</td>
       </tr>
-      <tr v-if="exchange && exchange.bpi">
+      <tr v-if="exchange && exchange.ETH">
         <td>EUR</td>
-        <td>{{ exchange.bpi.EUR.rate }}</td>
-      </tr>
-      <tr v-if="exchange && exchange.bpi">
-        <td>GBP</td>
-        <td>{{ exchange.bpi.GBP.rate }}</td>
+        <td>{{ exchange.ETH.EUR }}</td>
       </tr>
       </table>
   </div>
@@ -27,7 +23,7 @@
 
 <script>
 export default {
-  name: 'ExchangeRate',
+  name: 'ExchangeRateETH',
   props: [],
   data() {
     return {
@@ -38,7 +34,7 @@ export default {
   methods: {
     async fetchExchange () {
       try{
-        const response = await fetch('http://api.coindesk.com/v1/bpi/currentprice.json')
+        const response = await fetch('https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH&tsyms=USD,EUR&api_key={f3d184a97bd0fe5987fc2520bb7111557345e7437308a75fcf20d7ee63c4428d}')
         const data = await response.json()
         return data
       }
@@ -76,21 +72,24 @@ header {
   font-style: normal;
   font-variation-settings:
   "slnt" 0;
+  color: white;
 }
 button {
   margin-left: 30px;
 }
 .exchanges {
+  background: #284875;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 230px;
-  
+  border-radius: 8px;
+  padding: 20px 30px;
   margin-bottom: 10px;
   margin-top: 10px;
+  
 }
 table {
-  background: darkolivegreen;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -113,5 +112,6 @@ th{
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 8px;
+  color: white;
 }
 </style>
