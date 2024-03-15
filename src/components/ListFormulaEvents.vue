@@ -11,7 +11,8 @@
           </tr>
           <tr v-for="(practice, practiceName) in race" :key="practiceName">
             <td v-if="['FirstPractice', 'SecondPractice', 'ThirdPractice', 'Qualifying'].includes(practiceName)" style="width: 50%;">{{ practiceName }}</td>
-            <td v-if="['FirstPractice', 'SecondPractice', 'ThirdPractice', 'Qualifying'].includes(practiceName)" style="width: 50%;">{{ formatDate(practice, race) }}</td>
+            <td v-if="['FirstPractice', 'SecondPractice', 'ThirdPractice', 'Qualifying'].includes(practiceName)" style="width: 50%;">{{ 
+            formatDate(practice) }}</td>
           </tr>
           <tr v-if="showRaceButton(race)">
             <td colspan="2" style="width: 100%; text-align: center;">
@@ -64,11 +65,11 @@ export default {
       const raceDate = new Date(race.date);
       return raceDate < currentDate; // Показувати кнопку лише якщо дата гонки вже минула
     },
-    formatDate(practice,) {
+    formatDate(practice) {
       const currentDate = new Date();
-      const practiceDate = new Date(practice.date);
+      const practiceDate = new Date(`${practice.date}T${practice.time}`);
       if (practiceDate > currentDate) {
-        return `${practiceDate.getDate()}.${practiceDate.getMonth() + 1}.${practiceDate.getFullYear()}`;
+        return `${practiceDate.toLocaleString()}`;
       } else {
         return 'Already happened';
       }
