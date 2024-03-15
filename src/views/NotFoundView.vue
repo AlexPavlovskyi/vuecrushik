@@ -1,8 +1,16 @@
 <template>
   <div class="containerabout">
-    <h1>This is an about page 📋</h1>
+    <h1>404 Not Found</h1>
     <div class="border-bottom"></div>
-    <p>Welcome to our task list site, where organization meets efficiency in the digital age. We understand the complexities of modern life and the myriad of tasks that come with it. That's why we've designed a platform that seamlessly integrates into your daily routine, empowering you to stay on top of your tasks with ease. Whether you're managing personal projects, coordinating team assignments, or simply jotting down your daily to-dos, our intuitive interface ensures that nothing slips through the cracks. With customizable features tailored to your unique workflow, you can prioritize tasks, set deadlines, and track progress effortlessly. Say goodbye to scattered notes and forgotten appointments - our task list site is your one-stop solution for streamlined productivity. Join us today and experience the simplicity of staying organized in a chaotic world.</p>
+    <p>Oops! It seems like you've taken a wrong turn.
+
+The page you're looking for seems to have vanished into the digital ether. But don't worry, it's not lost forever. Our team of tech-savvy wizards is on the case, trying to summon it back from the depths of cyberspace.
+
+In the meantime, why not explore some of our other pages? We've got plenty of interesting content just waiting to be discovered. Or, if you're feeling adventurous, you can always try your luck with another search.
+
+And hey, if you think there's been a mistake or you need some assistance, feel free to reach out to our support team. They're experts at navigating the tangled web of the internet and are always happy to help.
+
+Thanks for your patience, and happy browsing!</p>
     <div class="border-bottom"></div>
     <router-link class="backHome" to="/">Back to Homepage</router-link>
   </div>
@@ -46,6 +54,7 @@ h1 {
   padding: 30px;
   border-radius: 5px;
   margin-bottom: 70px;
+
 }
 
 .btn {

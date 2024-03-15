@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="inter">Exchange Rates</h1>
+    <h1 class="inter">Exchange Rates 📉</h1>
 
     <ExchangeRateBTC />
     <ExchangeRateETH />
@@ -58,6 +58,8 @@ h1 {
   padding-right: 30px;
   padding-bottom: 30px;
   border-radius: 5px;
+  margin-bottom: 70px;
+
 }
 
 .btn {

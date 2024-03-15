@@ -22,6 +22,16 @@ const router = createRouter({
       path: '/exchange',
       name: 'exchange',
       component: ExchangeView
+    },
+    {
+      path: '/formula1',
+      name: 'formula1',
+      component: () => import('../views/FormulaView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFoundView.vue')
     }
   ]
 })

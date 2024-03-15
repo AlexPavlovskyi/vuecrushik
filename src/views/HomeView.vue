@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <HeaderSigma :showAddTask="showAddTask" @toggle-add-task="toggleAddTask" title="Task Tracker"/>
+    <HeaderSigma :showAddTask="showAddTask" @toggle-add-task="toggleAddTask" title="Task Tracker ✅"/>
     <div v-if="showAddTask">
       <AddTaskSigma @add-task="addTask"/>
     </div>
@@ -112,6 +112,8 @@ body {
   padding-right: 30px;
   padding-bottom: 30px;
   border-radius: 5px;
+  margin-bottom: 70px;
+
 }
 
 .btn {

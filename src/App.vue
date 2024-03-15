@@ -6,12 +6,13 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper"> 
-      <h1>Productivity Manager</h1>
-      <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="25" height="25" />
+      <h1>Productivity Manager 💼</h1>
+      <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="25" height="25" /> -->
       <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/exchange">Exchange Rates</RouterLink>
+        <RouterLink to="/formula1">Formula 1</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -40,7 +41,7 @@ footer {
   background-color: var(--color-background-soft);
   width: 100%;
   margin-bottom: 0px;
-  padding-top: 9px;
+  padding-top: 10px;
 }
 .footertitle{
   float: left;
@@ -94,7 +95,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   header {
     display: flex;
     place-items: center;
@@ -116,7 +117,9 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 50px;
   }
+  
 
   nav {
     text-align: left;
