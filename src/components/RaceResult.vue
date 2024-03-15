@@ -76,10 +76,10 @@ export default {
   padding: 20px;
   border-radius: 10px;
   width: 50%;
-  max-height: 80%;
-  overflow-y: auto;
+  overflow-y: auto; /* Дозволяє вертикальну прокрутку за потреби */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   align-items: center;
+  max-height: 80%;
 }
 
 .close {
@@ -161,5 +161,38 @@ th{
   border-radius: 8px;
   color: white;
 }
+/* Для всього скролбара */
+.modal-content::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px; /* Заокруглення скролбара */
+}
+
+/* Для стрілок скролбара */
+.modal-content::-webkit-scrollbar-button {
+  background: #555;
+}
+
+/* Для треку скролбара */
+.modal-content::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 10px; /* Заокруглення треку скролбара */
+}
+
+/* Для полоски скролбара */
+.modal-content::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px; /* Заокруглення підбірки скролбара */
+}
+
+/* Для полоски скролбара при наведенні */
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Для краю скролбара при початку */
+.modal-content::-webkit-scrollbar-corner {
+  background: #ccc;
+}
+
 </style>
 
