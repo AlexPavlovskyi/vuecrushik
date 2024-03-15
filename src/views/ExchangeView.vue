@@ -2,8 +2,8 @@
   <div class="container">
     <h1 class="inter">Exchange Rates 📉</h1>
 
-    <ExchangeRateBTC />
     <ExchangeRateETH />
+    <ExchangeRateBTC />
   </div>
 </template>
 

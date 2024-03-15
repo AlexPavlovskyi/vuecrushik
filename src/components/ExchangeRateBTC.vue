@@ -17,10 +17,10 @@
         <td>EUR</td>
         <td>{{ exchange.bpi.EUR.rate }}</td>
       </tr>
-      <!-- <tr v-if="exchange && exchange.bpi">
+      <tr v-if="exchange && exchange.bpi">
         <td>GBP</td>
         <td>{{ exchange.bpi.GBP.rate }}</td>
-      </tr> -->
+      </tr>
       </table>
   </div>
 </template>

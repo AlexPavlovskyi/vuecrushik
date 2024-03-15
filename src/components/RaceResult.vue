@@ -2,7 +2,7 @@
   <div class="modal" v-if="showModal">
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
-      <h1 class="title inter">Race Results</h1>
+      <h1 class="title inter">Race Results 🏆</h1>
       <table>
         <tr>
           <th>Position</th>
@@ -75,7 +75,7 @@ export default {
   background-color: rgba(128, 0, 0, 0.9);
   padding: 20px;
   border-radius: 10px;
-  width: 40%;
+  width: 50%;
   max-height: 80%;
   overflow-y: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
